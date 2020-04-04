@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<title>Home</title>
+
+
+<link href="main.css" rel="stylesheet">
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<script async defer src="getData.js"></script>
+<script async defer src="chartGenerator.js"></script>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Bar Chart Generator</h1>
+          <br>
+          <p class="lead">This is a program where you can visualize the net generation of fuels of two different states.</p>
+          <br>
+          <p class="lead">Please type the states of your interest and date range below. Once you are done, click the button below</p>
+
+        </div>
+    </div>
+
+    <div class="container-input">
+        <form>
+            <div class = "form-group">
+                <label for='state1'>State A</label>
+                <input class="form-control" type='text' id='state1' name='state1'>
+                <span class="break-point"> </span>
+            </div>
+
+            <div class="form-group">
+                <label for='state2'> State B</label>
+                <input type='text' class="form-control" id='state2' name='state2'>
+                <span class="break-point"> </span>
+
+            </div>
+
+            <div class="form-group">
+                <label for="month">Month and Year of your interest</label>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                        
+                            <select class="custom-select" id="inputYear01">
+                                <option class="form-control" selected>Choose Start Year</option>
+                                
+                            </select>
+                            
+        
+                        </div>
+        
+                        <div class="col">
+                            <select class="custom-select" id="inputMonth01">
+                                <option class="form-control" selected>Choose Start Month</option>
+                            </select>
+        
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <select class="custom-select" id="inputYear02">
+                                <option class="form-control" selected>Choose End Year</option>
+                            </select>
+        
+                        </div>
+        
+                        <div class="col">
+                            <select class="custom-select" id="inputMonth02">
+                                <option class="form-control" selected>Choose End Month</option>
+                            </select>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <p><a class="btn btn-primary btn-lg" href="#" id="Generate">Generate!</a></p>
+
+            </div>
+            
+
+
+
+
+        </form>
+    </div>
+
+    
+
+
+
+
+
+    <div class='mb-3'>
+        
+
+        
+
+
+
+    </div>
+
+
+    <!-- <p><a class="btn btn-primary btn-lg" href="#" id="Generate">Generate the Bar Chart here</a></p> -->
+
+
+
+    <!-- TODO change it to the form style -->
+    <!-- <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="First name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+        </form> -->
+    <!-- TODO Make another page to generate the chart // on the bottom by using navbar and auto scrolling for the user -->
+
+
+    <canvas id="resultChart"></canvas>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
