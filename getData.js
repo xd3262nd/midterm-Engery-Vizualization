@@ -29,6 +29,8 @@ let count = 0
 
 buttonEl.addEventListener("click", () => {
 
+    count = 0
+
 
     var inputA = stateA.value.toLowerCase()
     var inputB = stateB.value.toLowerCase()
